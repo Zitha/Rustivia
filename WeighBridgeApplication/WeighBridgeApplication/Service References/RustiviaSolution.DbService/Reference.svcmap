@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b8ccada1-ec71-4926-847d-f54b94152483" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:57969/DataContext.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataContext2.xsd" MetadataType="Schema" ID="04eb2a65-62d2-457f-8e41-7a593417ad32" SourceId="1" SourceUrl="http://localhost:57969/DataContext.svc?xsd=xsd0" />
+    <MetadataFile FileName="DataContext1.xsd" MetadataType="Schema" ID="0da6f338-6f65-4ef9-afe7-19281d3db646" SourceId="1" SourceUrl="http://localhost:57969/DataContext.svc?xsd=xsd1" />
+    <MetadataFile FileName="DataContext3.xsd" MetadataType="Schema" ID="d341f87c-9e8a-4422-bde8-f892c24fd868" SourceId="1" SourceUrl="http://localhost:57969/DataContext.svc?xsd=xsd3" />
+    <MetadataFile FileName="DataContext.wsdl" MetadataType="Wsdl" ID="0b42aea2-63c7-4ccc-8fd6-13c27987bfe6" SourceId="1" SourceUrl="http://localhost:57969/DataContext.svc?wsdl" />
+    <MetadataFile FileName="DataContext.disco" MetadataType="Disco" ID="924a9e52-d67b-49f1-8125-e2e19600c7f3" SourceId="1" SourceUrl="http://localhost:57969/DataContext.svc?disco" />
+    <MetadataFile FileName="DataContext.xsd" MetadataType="Schema" ID="6a729e33-86bc-405b-8bac-2c24565fa555" SourceId="1" SourceUrl="http://localhost:57969/DataContext.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

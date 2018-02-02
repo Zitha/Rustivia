@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="WeighBridgeApplication.View.ReprintInvoiceView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <UserControl.Resources>
+        <ResourceDictionary Source="/ResourceDictionary.xaml"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <HeaderedContentControl Grid.Column="0"
+            Grid.Row="0" Content="{Binding Path=Commands}"
+            Header="REPRINT INVOICE" 
+            Style="{StaticResource WeighBridgeHeaderStyle}"/>
+
+        <DataGrid Grid.Row="1" ItemsSource="{Binding Path=WeighBridgeInfos}" Margin="5"  SelectedItem="{Binding Path=SelectedIncompleteWeighBridgeInfo}"
+              CanUserResizeColumns="False" CanUserResizeRows="False" CanUserReorderColumns="False" CanUserAddRows="False"
+              AutoGenerateColumns="False" SelectionUnit="FullRow" SelectionMode="Single" AlternationCount="2"
+              AlternatingRowBackground="Gainsboro" RowBackground="White" HorizontalGridLinesBrush="LightGray"
+              VerticalGridLinesBrush="LightGray" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+            <DataGrid.InputBindings>
+                <MouseBinding Gesture="LeftDoubleClick" Command="{Binding SomeShitGoingOnCommand}" CommandParameter="{Binding ElementName=UsersDataGrid, Path=SelectedItem}" ></MouseBinding>
+            </DataGrid.InputBindings>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=Id}" Header="WeighBridge Number" IsReadOnly="True" MinWidth="80" />
+                <DataGridTextColumn Binding="{Binding Path=FirstMass}" Header="First mass" IsReadOnly="True" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=SecondMass}" Header="Second mass" IsReadOnly="True" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=NettMass}" Header="Nett Mass" IsReadOnly="True" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=Truck.TruckRegNumber}" Header="Truck Reg Number" IsReadOnly="True" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=Driver.Surname}" Header="Driver Name" IsReadOnly="True" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=Date}" Header="Date" IsReadOnly="True"  MinWidth="100" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Path=Product}" Header="Product" IsReadOnly="True" MinWidth="135" Width="1.1*"/>
+                <DataGridTextColumn Binding="{Binding Path=Comments}" Header="Comments" IsReadOnly="True" MinWidth="135" Width="1.2*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

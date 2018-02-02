@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="081245c7-5975-4d89-bf0a-cb6da7a9bb56" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.0.10/rustiviaservice2.0/DataService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataService1.wsdl" MetadataType="Wsdl" ID="76b2b0ed-1eca-4ec8-b1d9-52f46bf0eb6a" SourceId="1" SourceUrl="http://10.0.0.10/RustiviaService2.0/DataService.svc?wsdl" />
+    <MetadataFile FileName="DataService3.xsd" MetadataType="Schema" ID="6f6a320d-0253-498b-8795-e177630f9a0f" SourceId="1" SourceUrl="http://10.0.0.10/RustiviaService2.0/DataService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DataService31.xsd" MetadataType="Schema" ID="4bd5f80b-3346-4bc8-be26-30c6f27ae60a" SourceId="1" SourceUrl="http://10.0.0.10/RustiviaService2.0/DataService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DataService32.xsd" MetadataType="Schema" ID="181d533e-efe9-4920-8d50-99df365fd848" SourceId="1" SourceUrl="http://10.0.0.10/RustiviaService2.0/DataService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DataService1.disco" MetadataType="Disco" ID="832a2217-ba00-4a12-8dfd-9fa725020e6a" SourceId="1" SourceUrl="http://10.0.0.10/RustiviaService2.0/DataService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

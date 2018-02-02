@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/RustiviaSolutions.Service.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/RustiviaSolutions.Service.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:57969/DataContext.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/RustiviaSolutions.Models" />
+  <xs:complexType name="WeighBridgeInfoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Driver" nillable="true" type="tns:DriverDto" />
+      <xs:element minOccurs="0" name="FirstMass" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="NettMass" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Product" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecondMass" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TruckDto" nillable="true" type="tns:TruckDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WeighBridgeInfoDto" nillable="true" type="tns:WeighBridgeInfoDto" />
+  <xs:complexType name="DriverDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Firstname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupplierInfo" nillable="true" type="tns:SupplierInfoDto" />
+      <xs:element minOccurs="0" name="Surname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VatFormLocation" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DriverDto" nillable="true" type="tns:DriverDto" />
+  <xs:complexType name="SupplierInfoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyRegNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Drivers" nillable="true" type="tns:ArrayOfDriverDto" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Legalnote" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Logo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupplierName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Suppliercode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TellNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Trucks" nillable="true" type="tns:ArrayOfTruckDto" />
+      <xs:element minOccurs="0" name="VatNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SupplierInfoDto" nillable="true" type="tns:SupplierInfoDto" />
+  <xs:complexType name="ArrayOfDriverDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DriverDto" nillable="true" type="tns:DriverDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDriverDto" nillable="true" type="tns:ArrayOfDriverDto" />
+  <xs:complexType name="ArrayOfTruckDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TruckDto" nillable="true" type="tns:TruckDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTruckDto" nillable="true" type="tns:ArrayOfTruckDto" />
+  <xs:complexType name="TruckDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Own" type="xs:boolean" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/RustiviaSolutions.Models" minOccurs="0" name="SupplierInfo" nillable="true" type="q1:SupplierInfo" />
+      <xs:element minOccurs="0" name="TruckRegNumber" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/RustiviaSolutions.Models" minOccurs="0" name="WeighBridgeInfo" nillable="true" type="q2:ArrayOfWeighBridgeInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TruckDto" nillable="true" type="tns:TruckDto" />
+  <xs:complexType name="ArrayOfSupplierInfoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SupplierInfoDto" nillable="true" type="tns:SupplierInfoDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSupplierInfoDto" nillable="true" type="tns:ArrayOfSupplierInfoDto" />
+  <xs:complexType name="ArrayOfWeighBridgeInfoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WeighBridgeInfoDto" nillable="true" type="tns:WeighBridgeInfoDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWeighBridgeInfoDto" nillable="true" type="tns:ArrayOfWeighBridgeInfoDto" />
+</xs:schema>
